@@ -200,7 +200,7 @@ class screenSignup extends StatelessWidget {
                       child: Text(
                         'Create Account',
                         style: GoogleFonts.spaceGrotesk(
-                          fontSize: MediaQuery.of(context).size.height * .02,
+                          fontSize: MediaQuery.of(context).size.height * .015,
                           color: Colors.black,
                         ),
                       ),

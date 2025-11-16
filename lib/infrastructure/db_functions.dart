@@ -22,13 +22,21 @@ Future<bool> addUser(Usermodel s) async {
 }
 
 Future<bool> checklogin(Usermodel s) async {
-  final UserCredential userCredential = await FirebaseAuth.instance
-      .signInWithEmailAndPassword(email: s.useremail, password: s.userpassword);
-  if (userCredential != null) {
+  try {
+    final UserCredential userCredential = await FirebaseAuth.instance
+        .signInWithEmailAndPassword(
+          email: s.useremail,
+          password: s.userpassword,
+        );
+
     currentUserId = userCredential.user!.uid;
-    return Future.value(true);
-  } else {
-    return Future.value(false);
+    return true; // successful login
+  } on FirebaseAuthException catch (e) {
+    print("Login failed: ${e.code} - ${e.message}");
+    return false; // login failed (wrong password, user not found, etc.)
+  } catch (e) {
+    print("Unexpected error: $e");
+    return false; // any other error
   }
 }
 

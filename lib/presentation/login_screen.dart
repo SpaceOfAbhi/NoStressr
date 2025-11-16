@@ -42,7 +42,8 @@ class screenLogin extends StatelessWidget {
                       validator: (value) {
                         if (value!.isEmpty) {
                           return 'Email required';
-                        }
+                        } else
+                          return null;
                       },
                       decoration: InputDecoration(
                         filled: true,
@@ -64,8 +65,9 @@ class screenLogin extends StatelessWidget {
                       // ignore: body_might_complete_normally_nullable
                       validator: (value) {
                         if (value!.isEmpty) {
-                          return 'Email required';
-                        }
+                          return 'Password required';
+                        } else
+                          return null;
                       },
                       decoration: InputDecoration(
                         filled: true,
@@ -86,53 +88,67 @@ class screenLogin extends StatelessWidget {
                         backgroundColor: Color.fromARGB(255, 253, 186, 226),
                       ),
                       onPressed: () async {
-                        Usermodel u = Usermodel(
-                          '',
-                          '',
-                          emailController.text,
-                          passwordController.text,
-                        );
-                        bool isloggedin = await checklogin(u);
-                        if (isloggedin) {
-                          Navigator.pushReplacement(
-                            context,
-                            PageRouteBuilder(
-                              transitionDuration: const Duration(milliseconds: 150),
-                              reverseTransitionDuration: const Duration(
-                                seconds: 1,
+                        if (_loginAFormKey.currentState!.validate()) {
+                          Usermodel u = Usermodel(
+                            '',
+                            '',
+                            emailController.text,
+                            passwordController.text,
+                          );
+                          bool isloggedin = await checklogin(u);
+                          if (isloggedin) {
+                            Navigator.pushReplacement(
+                              context,
+                              PageRouteBuilder(
+                                transitionDuration: const Duration(
+                                  milliseconds: 150,
+                                ),
+                                reverseTransitionDuration: const Duration(
+                                  seconds: 1,
+                                ),
+                                pageBuilder:
+                                    (context, animation, secondaryAnimation) =>
+                                        HomeScreen(),
+                                transitionsBuilder:
+                                    (
+                                      context,
+                                      animation,
+                                      secondaryAnimation,
+                                      child,
+                                    ) {
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
                               ),
-                              pageBuilder:
-                                  (context, animation, secondaryAnimation) =>
-                                      HomeScreen(),
-                              transitionsBuilder:
-                                  (
-                                    context,
-                                    animation,
-                                    secondaryAnimation,
-                                    child,
-                                  ) {
-                                    return FadeTransition(
-                                      opacity: animation,
-                                      child: child,
-                                    );
-                                  },
-                            ),
-                          );
-                        } else {
-                          final snackbar = SnackBar(
-                            content: Text('loggin failed'),
-                            action: SnackBarAction(
-                              label: 'Close',
-                              onPressed: () {},
-                            ),
-                          );
-                          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                            );
+                          } else {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: const Text("Login Failed"),
+                                  content: const Text(
+                                    "Incorrect username or password",
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(context),
+                                      child: const Text("OK"),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+                          }
+                          ;
                         }
                       },
                       child: Text(
                         'LOGIN',
                         style: GoogleFonts.spaceGrotesk(
-                          fontSize: MediaQuery.of(context).size.height * .025,
+                          fontSize: MediaQuery.of(context).size.height * .02,
                           color: Colors.black,
                         ),
                       ),

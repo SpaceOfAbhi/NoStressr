@@ -76,6 +76,10 @@ class _StressTestScreenState extends State<StressTestScreen> {
                         "questionnaireScore": score,
                         "reactionScore": reactionResult["reactionScore"],
                       });
+                      Navigator.pop(context, {
+                        "questionnaireScore": score,
+                        "reactionScore": reactionResult["reactionScore"],
+                      });
                     }
                   },
                   child: Text("Next"),

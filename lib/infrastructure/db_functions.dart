@@ -54,3 +54,20 @@ Future<Usermodel> loaduser(String userID) async {
   );
   return Future.value(u);
 }
+
+Future<void> saveLatestResult(int finalScore) async {
+  try {
+    final uid = FirebaseAuth.instance.currentUser!.uid;
+
+    await FirebaseFirestore.instance.collection('users').doc(uid).update({
+      'latestScore': finalScore,
+      'testedTime': DateTime.now(),
+    });
+
+    print("Latest result updated successfully!");
+  } catch (e) {
+    print("Error updating latest result: $e");
+  }
+}
+
+

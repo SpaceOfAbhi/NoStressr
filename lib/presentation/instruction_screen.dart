@@ -37,7 +37,7 @@ class screenInstruction extends StatelessWidget {
               ),
             ),
             Text(
-              'Choose option that describes your current state.',
+              'Choose option that describes your state.',
               style: GoogleFonts.spaceGrotesk(
                 fontSize: 20,
                 color: Color.fromARGB(255, 162, 240, 244),

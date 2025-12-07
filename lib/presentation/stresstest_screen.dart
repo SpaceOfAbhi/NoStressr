@@ -59,6 +59,10 @@ class _StressTestScreenState extends State<StressTestScreen> {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 253, 186, 226),
+                  ),
+
                   onPressed: () async {
                     int score = calculateScore();
 
@@ -89,16 +93,17 @@ class _StressTestScreenState extends State<StressTestScreen> {
 
             // Question cards
             return Card(
+              color: Color.fromARGB(255, 162, 240, 244),
               margin: const EdgeInsets.symmetric(vertical: 8),
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       questions[index],
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 20,
                         fontWeight: FontWeight.w500,
                       ),
                     ),

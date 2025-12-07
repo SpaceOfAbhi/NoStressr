@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nostressr/infrastructure/db_functions.dart';
 import 'package:nostressr/model/user_model.dart';
-import 'package:nostressr/presentation/login_screen.dart';
 import 'package:nostressr/presentation/welcome_screen.dart';
 
 class screenSignup extends StatelessWidget {

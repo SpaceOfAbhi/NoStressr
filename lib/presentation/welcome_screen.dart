@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nostressr/infrastructure/db_functions.dart';
 import 'package:nostressr/presentation/home.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ScreenWelcome extends StatefulWidget {
   const ScreenWelcome({super.key});
@@ -24,11 +24,22 @@ class _ScreenWelcomeState extends State<ScreenWelcome> {
   Future<void> loadUserName() async {
     try {
       final uid = FirebaseAuth.instance.currentUser!.uid;
-      final u = await loaduser(uid); // your existing function
-      setState(() {
-        userName = u.username;
-        isLoading = false;
-      });
+      final userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .get();
+
+      if (userDoc.exists) {
+        setState(() {
+          userName = userDoc.data()?['user_name'] ?? "User"; // ✅ correct field
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          userName = "User";
+          isLoading = false;
+        });
+      }
     } catch (e) {
       setState(() {
         userName = "User";
@@ -49,11 +60,13 @@ class _ScreenWelcomeState extends State<ScreenWelcome> {
             children: [
               SizedBox(height: MediaQuery.of(context).size.height * 0.15),
               Text(
-                isLoading ? "Loading..." : "Hi $userName, Welcome 👋",
+                isLoading ? "Loading..." : "Hi $userName, Welcome",
                 style: GoogleFonts.spaceGrotesk(
                   color: Colors.white,
                   fontSize: 30,
+                  fontWeight: FontWeight.w600,
                 ),
+                textAlign: TextAlign.center,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -89,13 +102,16 @@ class _ScreenWelcomeState extends State<ScreenWelcome> {
                   fontSize: 20,
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.45),
+              Spacer(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
-                width: MediaQuery.of(context).size.width * 0.90,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color.fromARGB(255, 162, 240, 244),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                   ),
                   onPressed: () {
                     Navigator.pushReplacement(
@@ -119,10 +135,12 @@ class _ScreenWelcomeState extends State<ScreenWelcome> {
                     style: GoogleFonts.spaceGrotesk(
                       fontSize: MediaQuery.of(context).size.height * 0.025,
                       color: Colors.black,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
               ),
+              SizedBox(height: 30),
             ],
           ),
         ),

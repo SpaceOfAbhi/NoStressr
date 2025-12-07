@@ -126,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ? "Last tested:\n${lastTested!.day}/${lastTested!.month}/${lastTested!.year}  "
                                       "\n${lastTested!.hour.toString().padLeft(2, '0')}:"
                                       "${lastTested!.minute.toString().padLeft(2, '0')}"
-                                : "Not Tested Yet",
+                                : "",
                             style: GoogleFonts.spaceGrotesk(
                               fontSize:
                                   MediaQuery.of(context).size.height * 0.018,

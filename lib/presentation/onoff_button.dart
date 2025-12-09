@@ -14,7 +14,6 @@ class _OnOffButtonState extends State<OnOffButton> {
   SMITrigger? _triggerA;
   SMITrigger? _triggerB;
 
-  final AudioPlayer _player = AudioPlayer();
 
   void _onRiveInit(Artboard artboard) {
     // State Machine 1 → Animation A

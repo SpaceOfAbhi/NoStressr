@@ -13,8 +13,6 @@ class FunnyButton extends StatefulWidget {
 class _FunnyButtonState extends State<FunnyButton> {
   SMITrigger? _triggerA;
 
-  final AudioPlayer _player = AudioPlayer();
-
   void _onRiveInit(Artboard artboard) {
     final controllerA = StateMachineController.fromArtboard(
       artboard,

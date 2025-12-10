@@ -1,4 +1,4 @@
-# 🎮 Nostressr
+# Nostressr
 
 Nostressr is a stress assessment and relief application built using **Flutter**.  
 It combines relaxation tools with interactive **fidget-based** features to help users reduce and manage stress effectively.

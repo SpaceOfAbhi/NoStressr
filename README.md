@@ -16,9 +16,6 @@ It combines relaxation tools with interactive **fidget-based** features to help 
   - Funny Button  
   - (More interactive toys coming soon!)
 
-- 🎥 **Record & Save Relaxation Sessions**
-  - Users can view their recorded fidget interactions to track progress.
-
 - 🎨 **Smooth & Realistic Animations**
   - Built using **Rive animations** for an immersive tactile experience.
 
@@ -30,11 +27,11 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 | Splash Screen | Home Screen | Stress Assessment |
 |---------------|-------------|-----------------|
-| ![Splash](assets/screens/splash.png) | ![Home](assets/screens/home.png) | ![Assessment](assets/screens/assessment.png) |
+| ![Splash](assets/screens/splash.jpg) | ![Home](assets/screens/home.png) | ![Assessment](assets/screens/test.png) |
 
 | Fidget Toy – Click Switch | On/Off Switch | Funny Button |
 |---------------------------|---------------|--------------|
-| ![Click Switch](assets/screens/click_switch.png) | ![OnOff](assets/screens/on_off.png) | ![Funny](assets/screens/funny_button.png) |
+| ![Click Switch](assets/logo/clickbutton.png) | ![OnOff](assets/logo/onoffbutton.png) | ![Funny](assets/logo/funnybutton.png) |
 
 ---
 
@@ -43,7 +40,7 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 - **Flutter**
 - **Dart**
 - **Rive animations**
-- *(Firebase integration planned)*
+- **Firebase**
 
 ---
 

@@ -36,10 +36,6 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 |---------------------------|---------------|--------------|
 | ![Click Switch](assets/screens/click_switch.png) | ![OnOff](assets/screens/on_off.png) | ![Funny](assets/screens/funny_button.png) |
 
-| Record Screen | Playback | Profile / Settings |
-|---------------|----------|------------------|
-| ![Record](assets/screens/record.png) | ![Playback](assets/screens/playback.png) | ![Settings](assets/screens/settings.png) |
-
 ---
 
 ## 🛠️ Tech Stack

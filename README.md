@@ -48,7 +48,7 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 You can try the app by downloading the APK below:
 
-🔹 [Download APK (v1.0.0)](https://github.com/SpaceOfAbhi/NoStressr/releases/tag/v1.0.0)
+🔹 [Download APK (v1.0.0)](https://github.com/SpaceOfAbhi/NoStressr/releases/download/v1.0.0/Nostressr_v1.0.0.apk)
 
 > ⚠️ Enable “Install from Unknown Sources” on your Android device.
 ---

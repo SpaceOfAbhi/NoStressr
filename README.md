@@ -31,7 +31,8 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 | Fidget Toy – Click Switch | On/Off Switch | Funny Button |
 |---------------------------|---------------|--------------|
-| ![Click Switch](assets/logo/clickbutton.png) | ![OnOff](assets/logo/onoffbutton.png) | ![Funny](assets/logo/funnybutton.png) |
+| [![Click Switch](assets/logo/clickbutton.png)](assets/screens/click.mp4) | [![On/Off](assets/logo/onoffbutton.png)](assets/videos/onoff.mp4) | [![Funny](assets/logo/funnybutton.png)](assets/videos/funnybutton.mp4) |
+
 
 ---
 

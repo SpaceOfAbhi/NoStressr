@@ -25,8 +25,8 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 > Replace the filenames with your actual images once uploaded
 
-| Splash Screen | Home Screen | Stress Assessment |
-|---------------|-------------|-----------------|
+| Splash Screen | Login Screen | Home Screen | Stress Assessment |
+|---------------|-------------|-------------|-----------------|
 | ![Splash](assets/screens/splash.jpg) | ![Login](assets/screens/login.jpg) | ![Home](assets/screens/home.jpg) | ![Assessment](assets/screens/test.jpg) |
 
 | Fidget Toy – Click Switch | On/Off Switch | Funny Button |

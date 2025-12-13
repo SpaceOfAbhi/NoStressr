@@ -44,6 +44,14 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 - **Firebase**
 
 ---
+## 📥 Download
+
+You can try the app by downloading the APK below:
+
+🔹 [Download APK (v1.0.0)](https://github.com/USERNAME/REPO/releases/download/v1.0.0/app-release.apk)
+
+> ⚠️ Enable “Install from Unknown Sources” on your Android device.
+---
 
 ## 🚀 Getting Started
 

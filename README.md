@@ -27,7 +27,7 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 | Splash Screen | Home Screen | Stress Assessment |
 |---------------|-------------|-----------------|
-| ![Splash](assets/screens/splash.jpg) | ![Home](assets/screens/home.png) | ![Assessment](assets/screens/test.png) |
+| ![Splash](assets/screens/splash.jpg) | ![Login](assets/screens/login.jpg) | ![Home](assets/screens/home.jpg) | ![Assessment](assets/screens/test.jpg) |
 
 | Fidget Toy – Click Switch | On/Off Switch | Funny Button |
 |---------------------------|---------------|--------------|

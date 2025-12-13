@@ -5,23 +5,23 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🧠 **Stress Assessment**
+-  **Stress Assessment**
   - Evaluate current stress levels through quick assessments.
 
-- 🎯 **Stress Relief Fidget Toys**
+-  **Stress Relief Fidget Toys**
   - Click Switch  
   - On/Off Switch  
   - Funny Button  
   - (More interactive toys coming soon!)
 
-- 🎨 **Smooth & Realistic Animations**
+-  **Smooth & Realistic Animations**
   - Built using **Rive animations** for an immersive tactile experience.
 
 ---
 
-## 📱 App Screenshots (Preview)
+##  App Screenshots (Preview)
 
 > Replace the filenames with your actual images once uploaded
 
@@ -36,7 +36,7 @@ It combines relaxation tools with interactive **fidget-based** features to help 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Flutter**
 - **Dart**
@@ -53,18 +53,4 @@ You can try the app by downloading the APK below:
 > ⚠️ Enable “Install from Unknown Sources” on your Android device.
 ---
 
-## 🚀 Getting Started
-
-```bash
-# Clone the repository
-git clone <repo-link>
-
-# Go into the project folder
-cd nostressr
-
-# Install dependencies
-flutter pub get
-
-# Run the app
-flutter run
 
